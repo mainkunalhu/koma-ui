@@ -4,7 +4,7 @@
   "homepage": "https://komaui.iamkunal.in",
   "items": [
     {
-      "name": "thinking loader",
+      "name": "thinking-loader",
       "type": "registry:ui",
       "title": "thinking loader",
       "description": "A simple loading indicator that cycles through a list of status messages.",

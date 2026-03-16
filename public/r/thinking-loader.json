@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "thinking loader",
+  "name": "thinking-loader",
   "title": "thinking loader",
   "description": "A simple loading indicator that cycles through a list of status messages.",
   "dependencies": [
