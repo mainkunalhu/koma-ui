@@ -1,0 +1,9 @@
+import { cn } from "@/lib/utils"
+
+export function GridRootLayout({ children }: { children?: React.ReactNode }) {
+  return <div className="grid w-full grid-cols-4 gap-3 p-2">{children}</div>
+}
+
+export function GridBox({ children, className }: { children?: React.ReactNode; className?: string }) {
+  return <div className={cn("col-span-1 flex h-full min-h-16 items-center justify-center rounded-md border", className)}>{children}</div>
+}
