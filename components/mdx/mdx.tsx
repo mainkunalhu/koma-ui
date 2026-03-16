@@ -1,11 +1,19 @@
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import type { MDXComponents } from "mdx/types"
-import ButtonPreview from "./components/button-preview"
+import { ThinkingLoaderPreview, ThinkingLoaderUsages, ThinkingLoaderProps } from "./components-preview"
+import { InstalltionCmd } from "./installation"
+import { ComponentsList } from "./components-list"
+
 export function getMDXComponents(components?: MDXComponents) {
   return {
     ...defaultMdxComponents,
     ...components,
-    ButtonPreview,
+    ComponentsList,
+    InstalltionCmd,
+    // components
+    ThinkingLoaderPreview,
+    ThinkingLoaderUsages,
+    ThinkingLoaderProps,
   } satisfies MDXComponents
 }
 

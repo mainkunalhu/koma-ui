@@ -156,27 +156,4 @@
   .manual-shiki-container code {
     @apply !rounded-none;
   }
-
-  /* 1. Reset the counter on the <code> block */
-  .shiki code {
-    counter-reset: line;
-    display: grid; /* Grid ensures line numbers align perfectly */
-  }
-
-  /* 2. Style the line wrapper */
-  .shiki .line {
-    @apply flex min-h-[1.5rem] items-center px-4;
-  }
-
-  /* 3. Generate and style the numbers */
-  .shiki .line::before {
-    counter-increment: line;
-    content: counter(line);
-
-    /* Look & Feel: Matches the high-density Koma UI style */
-    @apply mr-6 w-4 text-right text-[10px] text-black select-none dark:text-white;
-
-    /* Ensure the number doesn't move when the code scrolls */
-    flex-shrink: 0;
-  }
 }
