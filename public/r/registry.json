@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "KOMA UI",
+  "homepage": "https://komaui.iamkunal.in",
+  "items": [
+    {
+      "name": "thinking loader",
+      "type": "registry:ui",
+      "title": "thinking loader",
+      "description": "A simple loading indicator that cycles through a list of status messages.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["spinner"],
+      "files": [
+        {
+          "path": "components/mdx/components/thinking-loader.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

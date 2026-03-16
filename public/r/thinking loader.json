@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "thinking loader",
+  "title": "thinking loader",
+  "description": "A simple loading indicator that cycles through a list of status messages.",
+  "dependencies": [
+    "motion"
+  ],
+  "registryDependencies": [
+    "spinner"
+  ],
+  "files": [
+    {
+      "path": "components/mdx/components/thinking-loader.tsx",
+      "content": "\"use client\"\n\nimport { motion } from \"motion/react\"\nimport { Spinner } from \"@/components/ui/spinner\"\n\nfunction ThinkingText({ textData = [] }: { textData?: string[] }) {\n  if (!textData || textData.length === 0) return null\n  const extendedTextData = [...textData, textData[0]]\n  const yKeyframes = extendedTextData.flatMap((_, index) => {\n    const yPosition = `-${(index * 100) / extendedTextData.length}%`\n    if (index === extendedTextData.length - 1) {\n      return [yPosition]\n    }\n    return [yPosition, yPosition]\n  })\n\n  return (\n    <div className=\"h-6 overflow-hidden text-sm text-primary\">\n      <motion.div\n        animate={{ y: yKeyframes }}\n        transition={{\n          duration: textData.length * 2,\n          ease: \"easeInOut\",\n          repeat: Infinity,\n        }}\n        className=\"flex flex-col\"\n      >\n        {extendedTextData.map((item, index) => (\n          <div key={`${item}-${index}`} className=\"flex h-6 items-center\">\n            {item}\n          </div>\n        ))}\n      </motion.div>\n    </div>\n  )\n}\n\nexport default function ThinkingLoader({ thinkingText = [\"Thinking ...\", \"Searching Web\", \"Extracting Relevant Info\", \"Generating Answer\"] }: { thinkingText?: string[] }) {\n  return (\n    <div className=\"flex flex-row items-center justify-center gap-2\">\n      <Spinner className=\"size-6\" />\n      <ThinkingText textData={thinkingText} />\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

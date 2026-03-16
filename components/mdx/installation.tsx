@@ -1,9 +1,8 @@
 import { highlightCode } from "@/lib/highlighter"
-import { cn } from "@/lib/utils"
 import { CopyButton } from "./copy-button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-const base_url = "http://localhost:3000"
+const base_url = "https://komaui.iamkunal.in"
 
 interface Props {
   name: string
@@ -40,11 +39,7 @@ export async function InstalltionCmd({ name }: Props) {
       {cmds.map(async (data, key) => {
         const highlighted = await highlightCode(data.cmd, "bash")
         return (
-          <TabsContent
-            className="manual-shiki-container group relative flex w-full items-center justify-between overflow-x-auto rounded-md border bg-black/90 p-2 font-mono text-sm dark:bg-muted/40"
-            value={data.key}
-            key={data.key + key}
-          >
+          <TabsContent className="manual-shiki-container group relative flex w-full items-center justify-between overflow-x-auto rounded-md border bg-black/90 p-2 font-mono text-sm dark:bg-muted/40" value={data.key} key={data.key + key}>
             <div className="rounded-none border-none" dangerouslySetInnerHTML={{ __html: highlighted }} />
             <CopyButton value={data.cmd} />
           </TabsContent>
