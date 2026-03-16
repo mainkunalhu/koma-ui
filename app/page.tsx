@@ -12,8 +12,8 @@ export default function Page() {
       <div className="flex min-h-[50vh] w-full flex-col items-center justify-center gap-4 p-5">
         <span className="text-sm font-semibold text-primary/80 md:text-lg">KOMA UI</span>
         <div className="flex flex-col items-center justify-center gap-4 text-center">
-          <div className="text-3xl font-bold text-primary md:text-5xl lg:text-7xl">The UI Kit for Intelligent Applications</div>
-          <div className="text-sm text-muted-foreground md:text-lg">A collection of beautifully crafted AI components designed to handle uncertainty, streaming, and complex interactions. Built to be copied, customized, and extended. Open Source. Open Code.</div>
+          <div className="text-3xl font-bold text-primary md:text-3xl lg:text-6xl xl:text-7xl">The UI Kit for Intelligent Applications</div>
+          <div className="text-xs text-muted-foreground md:text-sm lg:text-lg">A collection of beautifully crafted AI components designed to handle uncertainty, streaming, and complex interactions. Built to be copied, customized, and extended. Open Source. Open Code.</div>
         </div>
         <div className="mx-auto flex flex-row items-center justify-center gap-4">
           <Link href={"/docs"}>
@@ -31,7 +31,7 @@ export default function Page() {
         <GridBox>
           <ThinkingLoader />
         </GridBox>
-        <GridBox className="col-span-2">More Comming Soon</GridBox>
+        <GridBox className="md:col-span-2">More Comming Soon</GridBox>
       </GridRootLayout>
     </main>
   )

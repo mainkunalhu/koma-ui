@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils"
 
 export function GridRootLayout({ children }: { children?: React.ReactNode }) {
-  return <div className="grid w-full grid-cols-4 gap-3 p-2">{children}</div>
+  return <div className="grid w-full grid-cols-1 gap-3 p-2 md:grid-cols-2 lg:grid-cols-4">{children}</div>
 }
 
 export function GridBox({ children, className }: { children?: React.ReactNode; className?: string }) {
