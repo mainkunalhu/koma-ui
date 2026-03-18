@@ -1,8 +1,31 @@
+"use client"
+
 import { GridBox, GridRootLayout } from "@/components/home-grid-layout"
+import InputBox, { InputBoxToolType } from "@/components/mdx/components/input-box"
 import ThinkingLoader from "@/components/mdx/components/thinking-loader"
 import Navbar from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { Globe, Image as ImageIcon, Paintbrush, TerminalSquare } from "lucide-react"
+
+const AI_TOOLS: InputBoxToolType[] = [
+  {
+    icon: Globe,
+    value: "Web Search",
+  },
+  {
+    icon: ImageIcon,
+    value: "Create Images",
+  },
+  {
+    icon: Paintbrush,
+    value: "Canvas",
+  },
+  {
+    icon: TerminalSquare,
+    value: "Run Code",
+  },
+]
 
 export default function Page() {
   return (
@@ -31,7 +54,10 @@ export default function Page() {
         <GridBox>
           <ThinkingLoader />
         </GridBox>
-        <GridBox className="md:col-span-2">More Comming Soon</GridBox>
+        <GridBox className="border-none md:col-span-3">
+          <InputBox tools={AI_TOOLS} />
+        </GridBox>
+        <GridBox className="md:col-span-4">More Comming Soon</GridBox>
       </GridRootLayout>
     </main>
   )

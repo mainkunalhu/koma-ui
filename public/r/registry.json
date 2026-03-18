@@ -16,6 +16,20 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "input-box",
+      "type": "registry:ui",
+      "title": "Input box",
+      "description": "A rich input component for AI applications, supporting multiline text, photos uploads, and quick tool selection.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["input-group", "button", "select"],
+      "files": [
+        {
+          "path": "components/mdx/components/input-box.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

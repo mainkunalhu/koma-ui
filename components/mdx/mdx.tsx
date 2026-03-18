@@ -1,6 +1,6 @@
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import type { MDXComponents } from "mdx/types"
-import { ThinkingLoaderPreview, ThinkingLoaderUsages, ThinkingLoaderProps } from "./components-preview"
+import { InputBoxPreview, ThinkingLoaderPreview, ThinkingLoaderProps, ThinkingLoaderUsages, InputBoxProps, InputBoxUsages } from "./components-preview"
 import { InstalltionCmd } from "./installation"
 import { ComponentsList } from "./components-list"
 
@@ -11,9 +11,12 @@ export function getMDXComponents(components?: MDXComponents) {
     ComponentsList,
     InstalltionCmd,
     // components
+    InputBoxPreview,
     ThinkingLoaderPreview,
-    ThinkingLoaderUsages,
     ThinkingLoaderProps,
+    ThinkingLoaderUsages,
+    InputBoxProps,
+    InputBoxUsages,
   } satisfies MDXComponents
 }
 
