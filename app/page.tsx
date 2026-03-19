@@ -7,6 +7,7 @@ import Navbar from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Globe, Image as ImageIcon, Paintbrush, TerminalSquare } from "lucide-react"
+import AiMessage from "@/components/mdx/components/ai-message"
 
 const AI_TOOLS: InputBoxToolType[] = [
   {
@@ -26,6 +27,8 @@ const AI_TOOLS: InputBoxToolType[] = [
     value: "Run Code",
   },
 ]
+
+const aiResponse = `Hi there! 👋 Welcome to **Koma UI**. \n\nI can seamlessly render *markdown* and \`inline code\` right out of the box.`
 
 export default function Page() {
   return (
@@ -57,7 +60,10 @@ export default function Page() {
         <GridBox className="border-none md:col-span-3">
           <InputBox tools={AI_TOOLS} />
         </GridBox>
-        <GridBox className="md:col-span-4">More Comming Soon</GridBox>
+        <GridBox className="min-h-44 md:col-span-2 md:min-h-36">
+          <AiMessage content={aiResponse} className="w-[90%]" />
+        </GridBox>
+        <GridBox className="md:col-span-2">More Comming Soon</GridBox>
       </GridRootLayout>
     </main>
   )
