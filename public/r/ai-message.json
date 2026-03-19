@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-message",
+  "title": "Streaming AI Message",
+  "description": "A dynamic message component that smoothly renders streaming AI text and automatically formats Markdown as they generate.",
+  "dependencies": [
+    "react-markdown",
+    "remark-gfm"
+  ],
+  "files": [
+    {
+      "path": "components/mdx/components/ai-message.tsx",
+      "content": "\"use client\"\n\nimport ReactMarkdown from \"react-markdown\"\nimport remarkGfm from \"remark-gfm\"\nimport { cn } from \"@/lib/utils\"\n\ninterface AiMessageProps {\n  content: string\n  className?: string\n}\n\nexport default function AiMessage({ content, className }: AiMessageProps) {\n  return (\n    <div className={cn(\"rounded-2xl bg-card px-5 py-2\", className)}>\n      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

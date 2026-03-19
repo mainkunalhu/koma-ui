@@ -30,6 +30,19 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "ai-message",
+      "type": "registry:ui",
+      "title": "Streaming AI Message",
+      "description": "A dynamic message component that smoothly renders streaming AI text and automatically formats Markdown as they generate.",
+      "dependencies": ["react-markdown", "remark-gfm"],
+      "files": [
+        {
+          "path": "components/mdx/components/ai-message.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
