@@ -40,7 +40,7 @@ export async function InstalltionCmd({ name }: Props) {
         const highlighted = await highlightCode(data.cmd, "bash")
         return (
           <TabsContent className="manual-shiki-container group relative flex w-full items-center justify-between overflow-x-auto rounded-md border bg-black/90 p-2 font-mono text-sm dark:bg-muted/40" value={data.key} key={data.key + key}>
-            <div className="rounded-none border-none" dangerouslySetInnerHTML={{ __html: highlighted }} />
+            <div className="overflow-x-auto rounded-none border-none" dangerouslySetInnerHTML={{ __html: highlighted }} />
             <CopyButton value={data.cmd} />
           </TabsContent>
         )

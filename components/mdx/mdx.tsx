@@ -1,6 +1,6 @@
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import type { MDXComponents } from "mdx/types"
-import { InputBoxPreview, ThinkingLoaderPreview, ThinkingLoaderProps, ThinkingLoaderUsages, InputBoxProps, InputBoxUsages, AiMessagePreview, AiMessageProps, AiMessageUsages } from "./components-preview"
+import { InputBoxPreview, ThinkingLoaderPreview, ThinkingLoaderProps, ThinkingLoaderUsages, InputBoxProps, InputBoxUsages, AiMessagePreview, AiMessageProps, AiMessageUsages, ChainOfThoughtPreview, ChainOfThoughtProps, ChainOfThoughtUsages } from "./components-preview"
 import { InstalltionCmd } from "./installation"
 import { ComponentsList } from "./components-list"
 
@@ -20,6 +20,9 @@ export function getMDXComponents(components?: MDXComponents) {
     AiMessagePreview,
     AiMessageProps,
     AiMessageUsages,
+    ChainOfThoughtPreview,
+    ChainOfThoughtProps,
+    ChainOfThoughtUsages,
   } satisfies MDXComponents
 }
 
