@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Globe, Image as ImageIcon, Paintbrush, TerminalSquare } from "lucide-react"
 import AiMessage from "@/components/mdx/components/ai-message"
+import { useState, useEffect } from "react"
+import ChainOfThought from "@/components/mdx/components/chain-of-thought"
 
 const AI_TOOLS: InputBoxToolType[] = [
   {
@@ -31,6 +33,52 @@ const AI_TOOLS: InputBoxToolType[] = [
 const aiResponse = `Hi there! 👋 Welcome to **Koma UI**. \n\nI can seamlessly render *markdown* and \`inline code\` right out of the box.`
 
 export default function Page() {
+  const [streamedText, setStreamedText] = useState("")
+  const [isStreaming, setIsStreaming] = useState(false)
+
+  useEffect(() => {
+    const controller = new AbortController()
+
+    const fetchStream = async () => {
+      setIsStreaming(true)
+      setStreamedText("")
+
+      try {
+        const response = await fetch("/api/stream-chain-of-thought", {
+          signal: controller.signal,
+        })
+
+        if (!response.body) return
+
+        const reader = response.body.getReader()
+        const decoder = new TextDecoder()
+        let done = false
+
+        while (!done) {
+          const { value, done: readerDone } = await reader.read()
+          done = readerDone
+
+          if (value) {
+            const chunkValue = decoder.decode(value, { stream: true })
+            setStreamedText((prev) => prev + chunkValue)
+          }
+        }
+      } catch (error) {
+        if (error instanceof Error && error.name === "AbortError") {
+          return
+        }
+        setStreamedText("Stream connection failed.")
+      } finally {
+        setIsStreaming(false)
+      }
+    }
+
+    fetchStream()
+
+    return () => {
+      controller.abort()
+    }
+  }, [])
   return (
     <main className="mx-auto max-w-6xl">
       <Navbar />
@@ -63,7 +111,11 @@ export default function Page() {
         <GridBox className="min-h-44 md:col-span-2 md:min-h-36">
           <AiMessage content={aiResponse} className="w-[90%]" />
         </GridBox>
-        <GridBox className="md:col-span-2">More Comming Soon</GridBox>
+
+        <GridBox className="py-4 md:col-span-2">
+          <ChainOfThought text={streamedText} isLoading={isStreaming} defaultOpen={false} />
+        </GridBox>
+        <GridBox className="md:col-span-4">More Comming Soon</GridBox>
       </GridRootLayout>
     </main>
   )

@@ -9,6 +9,14 @@ const componentsList: GridItem[] = [
     name: "Input Box",
     linkPath: "/docs/components/input-box",
   },
+  {
+    name: "Chain of thought",
+    linkPath: "/docs/components/chain-of-thought",
+  },
+  {
+    name: "Streaming AI Message",
+    linkPath: "/docs/components/streaming-ai-message",
+  },
 ]
 
 export function ComponentsList() {

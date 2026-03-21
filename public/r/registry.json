@@ -43,6 +43,19 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "chain-of-thought",
+      "type": "registry:ui",
+      "title": "Chain of Thought",
+      "description": "A sleek, terminal-like accordion block that sits above the final answer. It shows the AI's internal steps like Searching database..., Reading 3 files..., Executing Python script....",
+      "dependencies": ["motion", "lucide-react"],
+      "files": [
+        {
+          "path": "components/mdx/components/chain-of-thought.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

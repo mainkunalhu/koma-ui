@@ -16,7 +16,7 @@ export default function ChainOfThought({ text, isLoading = false, title = "Reaso
   const [isOpen, setIsOpen] = useState(defaultOpen)
 
   return (
-    <div className={`w-full rounded-xl border border-border bg-card text-card-foreground shadow-sm ${className}`}>
+    <div className={`w-[85%] rounded-xl border border-border bg-card text-card-foreground shadow-sm ${className}`}>
       <button onClick={() => setIsOpen(!isOpen)} className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-sm font-medium transition-colors hover:bg-muted/50">
         <div className="flex items-center gap-3">
           <div className="flex items-center justify-center">{isLoading ? <Loader2 className="h-4 w-4 animate-spin text-primary" /> : <Check className="h-4 w-4 text-emerald-500" />}</div>
