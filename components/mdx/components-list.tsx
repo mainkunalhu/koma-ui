@@ -17,6 +17,10 @@ const componentsList: GridItem[] = [
     name: "Streaming AI Message",
     linkPath: "/docs/components/streaming-ai-message",
   },
+  {
+    name: "Mutiple Models Input Box",
+    linkPath: "/docs/components/mutiple-models-input-box",
+  },
 ]
 
 export function ComponentsList() {

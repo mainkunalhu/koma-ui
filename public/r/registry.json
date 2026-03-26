@@ -56,6 +56,20 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "mutiple-models-input-box",
+      "type": "registry:ui",
+      "title": "Mutiple Models Input Box",
+      "description": "A versatile chat input box featuring an integrated, categorized dropdown menu to easily switch between multiple AI models and providers.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["input-group", "button", "select"],
+      "files": [
+        {
+          "path": "components/mdx/components/mutiple-models-input-box.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

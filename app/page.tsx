@@ -10,6 +10,8 @@ import { Globe, Image as ImageIcon, Paintbrush, TerminalSquare } from "lucide-re
 import AiMessage from "@/components/mdx/components/ai-message"
 import { useState, useEffect } from "react"
 import ChainOfThought from "@/components/mdx/components/chain-of-thought"
+import MutipleModelsInputBox from "@/components/mdx/components/mutiple-models-input-box"
+import { modelSelectionData } from "@/components/mdx/components-preview"
 
 const AI_TOOLS: InputBoxToolType[] = [
   {
@@ -108,14 +110,15 @@ export default function Page() {
         <GridBox className="border-none md:col-span-3">
           <InputBox tools={AI_TOOLS} />
         </GridBox>
-        <GridBox className="min-h-44 md:col-span-2 md:min-h-36">
+        <GridBox className="min-h-44 md:col-span-4 md:min-h-36">
           <AiMessage content={aiResponse} className="w-[90%]" />
         </GridBox>
 
-        <GridBox className="py-4 md:col-span-2">
-          <ChainOfThought text={streamedText} isLoading={isStreaming} defaultOpen={false} />
+        <GridBox className="min-h-44 md:col-span-3 md:min-h-36">
+          <MutipleModelsInputBox data={modelSelectionData} className="w-[90%]" />
         </GridBox>
-        <GridBox className="md:col-span-4">More Comming Soon</GridBox>
+
+        <GridBox className="p-4 text-wrap md:col-span-1">More Comming Soon</GridBox>
       </GridRootLayout>
     </main>
   )
