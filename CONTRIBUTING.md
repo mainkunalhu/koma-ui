@@ -18,7 +18,7 @@ To run the project locally and start developing:
 
 ## Adding New Components to the Library
 
-Adding a new component to Koma UI involves writing the component, building it into the registry, and adding it to the documentation site. Follow these steps:
+Adding a new item to Koma UI involves writing the component, building it into the registry, and adding it to the documentation site. Koma UI distinguishes between **Components** (smaller UI pieces) and **Blocks** (full page layouts or complex structural shells). Follow these steps:
 
 ### 1. Create the Component
 
@@ -67,11 +67,17 @@ Create a new folder for your component previews: `components/mdx/components-prev
 - Export your new preview directory in `components/mdx/components-preview/index.ts`.
 - Import and register your preview components (Preview, Props, Usages) into the `getMDXComponents` function inside `components/mdx/mdx.tsx`.
 
-**C. Update the Components List**
-Add your component to the array in `components/mdx/components-list.tsx` to ensure it appears on the main components listing page.
+**C. Update the Listing Pages**
+Add your item to the appropriate list to ensure it appears on the main listing page:
+- **For Components**: Add it to the array in `components/mdx/components-list.tsx`.
+- **For Blocks**: Add it to the array in `components/mdx/blocks-list.tsx`.
 
 **D. Create the MDX Page**
-Finally, create your component's documentation page at `content/docs/components/[your-component-name].mdx`. Use the registered preview components inside this file to render the live demo, installation command, usages, and props table.
+Finally, create your documentation page:
+- **For Components**: `content/docs/components/[your-component-name].mdx`
+- **For Blocks**: `content/docs/blocks/[your-component-name].mdx`
+
+Use the registered preview components inside this file to render the live demo, installation command, usages, and props table.
 
 ### 5. Test and Verify
 
