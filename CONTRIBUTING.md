@@ -18,7 +18,7 @@ To run the project locally and start developing:
 
 ## Adding New Components to the Library
 
-Koma UI operates as a component registry. To submit a new component, please follow these steps:
+Adding a new component to Koma UI involves writing the component, building it into the registry, and adding it to the documentation site. Follow these steps:
 
 ### 1. Create the Component
 
@@ -53,9 +53,29 @@ Once your component is ready and the registry is updated, run the registry build
 bun run registry:build
 ```
 
-### 4. Test and Verify
+### 4. Create Documentation & Previews
 
-Verify that your component renders correctly in the local development environment and that the registry build completes without errors.
+To make your component visible on the documentation site, you must create its preview components and MDX documentation page.
+
+**A. Create Preview Components**
+Create a new folder for your component previews: `components/mdx/components-preview/[your-component-name]/`. Inside this folder, create two separate files to avoid React Server/Client conflicts:
+1. `previewer.tsx`: Create an interactive wrapper for your component. This file MUST include `"use client"` at the top.
+2. `usages.tsx`: Create a server component displaying the code block using `<CodePreviewRender />`. This file MUST NOT include `"use client"`.
+3. `index.ts`: Export both components from this file.
+
+**B. Register the Preview Components**
+- Export your new preview directory in `components/mdx/components-preview/index.ts`.
+- Import and register your preview components (Preview, Props, Usages) into the `getMDXComponents` function inside `components/mdx/mdx.tsx`.
+
+**C. Update the Components List**
+Add your component to the array in `components/mdx/components-list.tsx` to ensure it appears on the main components listing page.
+
+**D. Create the MDX Page**
+Finally, create your component's documentation page at `content/docs/components/[your-component-name].mdx`. Use the registered preview components inside this file to render the live demo, installation command, usages, and props table.
+
+### 5. Test and Verify
+
+Verify that your component renders correctly in the local development environment and that the registry build completes without errors. Check the `/docs/components` route to ensure your component's documentation page works flawlessly.
 
 ## Pull Requests
 
