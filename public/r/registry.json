@@ -70,6 +70,19 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "prompt-suggestions",
+      "type": "registry:ui",
+      "title": "Prompt Suggestions",
+      "description": "A grid of suggestion cards to help users start a conversation with the AI.",
+      "dependencies": ["motion"],
+      "files": [
+        {
+          "path": "components/mdx/components/prompt-suggestions.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

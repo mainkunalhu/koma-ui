@@ -21,6 +21,10 @@ const componentsList: GridItem[] = [
     name: "Mutiple Models Input Box",
     linkPath: "/docs/components/mutiple-models-input-box",
   },
+  {
+    name: "Prompt Suggestions",
+    linkPath: "/docs/components/prompt-suggestions",
+  },
 ]
 
 export function ComponentsList() {

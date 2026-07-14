@@ -1,6 +1,7 @@
 // @ts-nocheck
-import * as __fd_glob_7 from "../content/docs/components/thinking-loader.mdx?collection=docs"
-import * as __fd_glob_6 from "../content/docs/components/streaming-ai-message.mdx?collection=docs"
+import * as __fd_glob_8 from "../content/docs/components/thinking-loader.mdx?collection=docs"
+import * as __fd_glob_7 from "../content/docs/components/streaming-ai-message.mdx?collection=docs"
+import * as __fd_glob_6 from "../content/docs/components/prompt-suggestions.mdx?collection=docs"
 import * as __fd_glob_5 from "../content/docs/components/mutiple-models-input-box.mdx?collection=docs"
 import * as __fd_glob_4 from "../content/docs/components/input-box.mdx?collection=docs"
 import * as __fd_glob_3 from "../content/docs/components/chain-of-thought.mdx?collection=docs"
@@ -15,4 +16,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content/docs", {}, {"blocks.mdx": __fd_glob_0, "components.mdx": __fd_glob_1, "index.mdx": __fd_glob_2, "components/chain-of-thought.mdx": __fd_glob_3, "components/input-box.mdx": __fd_glob_4, "components/mutiple-models-input-box.mdx": __fd_glob_5, "components/streaming-ai-message.mdx": __fd_glob_6, "components/thinking-loader.mdx": __fd_glob_7, });
+export const docs = await create.docs("docs", "content/docs", {}, {"blocks.mdx": __fd_glob_0, "components.mdx": __fd_glob_1, "index.mdx": __fd_glob_2, "components/chain-of-thought.mdx": __fd_glob_3, "components/input-box.mdx": __fd_glob_4, "components/mutiple-models-input-box.mdx": __fd_glob_5, "components/prompt-suggestions.mdx": __fd_glob_6, "components/streaming-ai-message.mdx": __fd_glob_7, "components/thinking-loader.mdx": __fd_glob_8, });
