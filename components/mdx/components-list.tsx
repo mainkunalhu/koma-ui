@@ -29,6 +29,10 @@ const componentsList: GridItem[] = [
     name: "Artifact Viewer",
     linkPath: "/docs/components/artifact-viewer",
   },
+  {
+    name: "Inline Citation",
+    linkPath: "/docs/components/inline-citation",
+  },
 ]
 
 export function ComponentsList() {

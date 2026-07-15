@@ -1,6 +1,6 @@
 import defaultMdxComponents from "fumadocs-ui/mdx"
 import type { MDXComponents } from "mdx/types"
-import { InputBoxPreview, ThinkingLoaderPreview, ThinkingLoaderProps, ThinkingLoaderUsages, InputBoxProps, InputBoxUsages, AiMessagePreview, AiMessageProps, AiMessageUsages, ChainOfThoughtPreview, ChainOfThoughtProps, ChainOfThoughtUsages, MutipleModelsInputBoxPreview, MutipleModelsInputBoxProps, MutipleModelsInputBoxUsages, PromptSuggestionsPreview, PromptSuggestionsProps, PromptSuggestionsUsages, ChatLayoutPreview, ChatLayoutUsages, ArtifactViewerPreview, ArtifactViewerProps, ArtifactViewerUsages } from "./components-preview"
+import { InputBoxPreview, ThinkingLoaderPreview, ThinkingLoaderProps, ThinkingLoaderUsages, InputBoxProps, InputBoxUsages, AiMessagePreview, AiMessageProps, AiMessageUsages, ChainOfThoughtPreview, ChainOfThoughtProps, ChainOfThoughtUsages, MutipleModelsInputBoxPreview, MutipleModelsInputBoxProps, MutipleModelsInputBoxUsages, PromptSuggestionsPreview, PromptSuggestionsProps, PromptSuggestionsUsages, ChatLayoutPreview, ChatLayoutUsages, ArtifactViewerPreview, ArtifactViewerProps, ArtifactViewerUsages, InlineCitationPreview, InlineCitationPropsTable, InlineCitationUsages } from "./components-preview"
 import { InstalltionCmd } from "./installation"
 import { ComponentsList } from "./components-list"
 import { BlocksList } from "./blocks-list"
@@ -36,6 +36,9 @@ export function getMDXComponents(components?: MDXComponents) {
     ArtifactViewerPreview,
     ArtifactViewerProps,
     ArtifactViewerUsages,
+    InlineCitationPreview,
+    InlineCitationPropsTable,
+    InlineCitationUsages,
   } satisfies MDXComponents
 }
 

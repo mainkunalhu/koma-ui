@@ -121,6 +121,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "inline-citation",
+      "type": "registry:ui",
+      "title": "Inline Citation",
+      "description": "Perplexity-style [1] inline citation badges that pop open a sleek source card when hovered or clicked.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/mdx/components/inline-citation.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

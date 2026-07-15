@@ -150,11 +150,15 @@
   }
 
   .manual-shiki-container pre {
-    @apply !rounded-none !border-none !bg-transparent;
+    @apply !rounded-none !border-none !bg-transparent !outline-none;
   }
 
   .manual-shiki-container code {
-    @apply !rounded-none;
+    @apply !rounded-none !border-none !outline-none;
+  }
+  
+  .manual-shiki-container {
+    @apply !border-none !outline-none;
   }
 }
 
