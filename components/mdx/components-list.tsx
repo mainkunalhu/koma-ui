@@ -25,6 +25,10 @@ const componentsList: GridItem[] = [
     name: "Prompt Suggestions",
     linkPath: "/docs/components/prompt-suggestions",
   },
+  {
+    name: "Artifact Viewer",
+    linkPath: "/docs/components/artifact-viewer",
+  },
 ]
 
 export function ComponentsList() {

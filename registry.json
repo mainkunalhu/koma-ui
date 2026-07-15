@@ -102,6 +102,25 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "artifact-viewer",
+      "type": "registry:ui",
+      "title": "Artifact Viewer",
+      "description": "A split-pane component for rendering generated code, markdown, or interactive HTML previews, complete with a code toggle and copy functionality.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "tabs"
+      ],
+      "files": [
+        {
+          "path": "components/mdx/components/artifact-viewer.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
