@@ -38,8 +38,8 @@ const componentsList: GridItem[] = [
     linkPath: "/docs/components/token-stats-badge",
   },
   {
-    name: "Persona Settings Drawer",
-    linkPath: "/docs/components/persona-settings-drawer",
+    name: "Slash Command Input",
+    linkPath: "/docs/components/slash-command-input",
   },
 ]
 

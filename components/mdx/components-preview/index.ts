@@ -9,3 +9,4 @@ export * from "./artifact-viewer"
 export * from "./inline-citation"
 export * from "./token-stats-badge"
 
+export * from "./slash-command-input"

@@ -8,8 +8,12 @@
       "type": "registry:ui",
       "title": "thinking loader",
       "description": "A simple loading indicator that cycles through a list of status messages.",
-      "dependencies": ["motion"],
-      "registryDependencies": ["spinner"],
+      "dependencies": [
+        "motion"
+      ],
+      "registryDependencies": [
+        "spinner"
+      ],
       "files": [
         {
           "path": "components/mdx/components/thinking-loader.tsx",
@@ -22,8 +26,14 @@
       "type": "registry:ui",
       "title": "Input box",
       "description": "A rich input component for AI applications, supporting multiline text, photos uploads, and quick tool selection.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["input-group", "button", "select"],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "input-group",
+        "button",
+        "select"
+      ],
       "files": [
         {
           "path": "components/mdx/components/input-box.tsx",
@@ -36,7 +46,10 @@
       "type": "registry:ui",
       "title": "Streaming AI Message",
       "description": "A dynamic message component that smoothly renders streaming AI text and automatically formats Markdown as they generate.",
-      "dependencies": ["react-markdown", "remark-gfm"],
+      "dependencies": [
+        "react-markdown",
+        "remark-gfm"
+      ],
       "files": [
         {
           "path": "components/mdx/components/ai-message.tsx",
@@ -49,7 +62,10 @@
       "type": "registry:ui",
       "title": "Chain of Thought",
       "description": "A sleek, terminal-like accordion block that sits above the final answer. It shows the AI's internal steps like Searching database..., Reading 3 files..., Executing Python script....",
-      "dependencies": ["motion", "lucide-react"],
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
       "files": [
         {
           "path": "components/mdx/components/chain-of-thought.tsx",
@@ -62,8 +78,14 @@
       "type": "registry:ui",
       "title": "Mutiple Models Input Box",
       "description": "A versatile chat input box featuring an integrated, categorized dropdown menu to easily switch between multiple AI models and providers.",
-      "dependencies": ["lucide-react"],
-      "registryDependencies": ["input-group", "button", "select"],
+      "dependencies": [
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "input-group",
+        "button",
+        "select"
+      ],
       "files": [
         {
           "path": "components/mdx/components/mutiple-models-input-box.tsx",
@@ -76,7 +98,9 @@
       "type": "registry:ui",
       "title": "Prompt Suggestions",
       "description": "A grid of suggestion cards to help users start a conversation with the AI.",
-      "dependencies": ["motion"],
+      "dependencies": [
+        "motion"
+      ],
       "files": [
         {
           "path": "components/mdx/components/prompt-suggestions.tsx",
@@ -154,17 +178,20 @@
       ]
     },
     {
-      "name": "persona-settings-drawer",
+      "name": "slash-command-input",
       "type": "registry:ui",
-      "title": "Persona Settings Drawer",
-      "description": "A sliding drawer with sliders for Temperature, Top P, and text areas for system instructions.",
+      "title": "Slash Command Input",
+      "description": "An input box with a built-in slash command menu for quick tool and persona selection.",
       "dependencies": [
-        "motion",
-        "lucide-react"
+        "lucide-react",
+        "motion"
+      ],
+      "registryDependencies": [
+        "button"
       ],
       "files": [
         {
-          "path": "components/mdx/components/persona-settings-drawer.tsx",
+          "path": "components/mdx/components/slash-command-input.tsx",
           "type": "registry:ui"
         }
       ]
