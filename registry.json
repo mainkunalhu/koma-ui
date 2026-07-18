@@ -152,6 +152,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "persona-settings-drawer",
+      "type": "registry:ui",
+      "title": "Persona Settings Drawer",
+      "description": "A sliding drawer with sliders for Temperature, Top P, and text areas for system instructions.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/mdx/components/persona-settings-drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

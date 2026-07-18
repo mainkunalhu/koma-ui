@@ -37,6 +37,10 @@ const componentsList: GridItem[] = [
     name: "Token Stats Badge",
     linkPath: "/docs/components/token-stats-badge",
   },
+  {
+    name: "Persona Settings Drawer",
+    linkPath: "/docs/components/persona-settings-drawer",
+  },
 ]
 
 export function ComponentsList() {
