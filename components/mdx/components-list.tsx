@@ -33,6 +33,10 @@ const componentsList: GridItem[] = [
     name: "Inline Citation",
     linkPath: "/docs/components/inline-citation",
   },
+  {
+    name: "Token Stats Badge",
+    linkPath: "/docs/components/token-stats-badge",
+  },
 ]
 
 export function ComponentsList() {

@@ -137,6 +137,21 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "token-stats-badge",
+      "type": "registry:ui",
+      "title": "Token Stats Badge",
+      "description": "A minimal, monospaced badge that sits at the bottom of an AI response showing tokens/sec, latency, and cost metrics.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/mdx/components/token-stats-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

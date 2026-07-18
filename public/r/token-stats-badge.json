@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "token-stats-badge",
+  "title": "Token Stats Badge",
+  "description": "A minimal, monospaced badge that sits at the bottom of an AI response showing tokens/sec, latency, and cost metrics.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "components/mdx/components/token-stats-badge.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\nimport { Activity, Clock, DollarSign } from \"lucide-react\"\n\nexport interface TokenStatsBadgeProps extends React.HTMLAttributes<HTMLDivElement> {\n  tokensPerSecond?: number\n  latencyMs?: number\n  cost?: number\n}\n\nexport function TokenStatsBadge({\n  tokensPerSecond,\n  latencyMs,\n  cost,\n  className,\n  ...props\n}: TokenStatsBadgeProps) {\n  // Format latency: if >= 1000ms, show in seconds (e.g., 1.2s), else show in ms (e.g., 800ms)\n  const formattedLatency = React.useMemo(() => {\n    if (latencyMs === undefined) return null\n    if (latencyMs >= 1000) {\n      return `${(latencyMs / 1000).toFixed(1)}s`\n    }\n    return `${Math.round(latencyMs)}ms`\n  }, [latencyMs])\n\n  // Format cost: show small fractions of a cent nicely, e.g., $0.004\n  const formattedCost = React.useMemo(() => {\n    if (cost === undefined) return null\n    return new Intl.NumberFormat(\"en-US\", {\n      style: \"currency\",\n      currency: \"USD\",\n      minimumFractionDigits: cost < 0.01 ? 3 : 2,\n      maximumFractionDigits: 4,\n    }).format(cost)\n  }, [cost])\n\n  return (\n    <div\n      className={cn(\n        \"inline-flex items-center gap-3 rounded-full border border-border/50 bg-muted/30 px-3 py-1\",\n        \"font-mono text-[11px] font-medium text-muted-foreground\",\n        \"transition-colors hover:bg-muted/50 hover:text-foreground\",\n        className\n      )}\n      {...props}\n    >\n      {tokensPerSecond !== undefined && (\n        <div className=\"flex items-center gap-1.5\" title=\"Tokens per second\">\n          <Activity className=\"h-3 w-3 opacity-70\" />\n          <span>{Math.round(tokensPerSecond)} t/s</span>\n        </div>\n      )}\n      \n      {tokensPerSecond !== undefined && (latencyMs !== undefined || cost !== undefined) && (\n        <div className=\"h-3 w-[1px] bg-border/50\" />\n      )}\n\n      {formattedLatency !== null && (\n        <div className=\"flex items-center gap-1.5\" title=\"Latency\">\n          <Clock className=\"h-3 w-3 opacity-70\" />\n          <span>{formattedLatency}</span>\n        </div>\n      )}\n      \n      {formattedLatency !== null && cost !== undefined && (\n        <div className=\"h-3 w-[1px] bg-border/50\" />\n      )}\n\n      {formattedCost !== null && (\n        <div className=\"flex items-center gap-1.5\" title=\"Estimated Cost\">\n          <DollarSign className=\"h-3 w-3 opacity-70\" />\n          <span>{formattedCost}</span>\n        </div>\n      )}\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
