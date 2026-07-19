@@ -210,6 +210,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "copilot-widget",
+      "type": "registry:ui",
+      "title": "Copilot Widget",
+      "description": "A floating layout block designed to be embedded into existing applications. It expands into a sleek, self-contained chat window.",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/mdx/components/copilot-widget.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

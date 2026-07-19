@@ -1,15 +1,16 @@
 // @ts-nocheck
-import * as __fd_glob_14 from "../content/docs/components/token-stats-badge.mdx?collection=docs"
-import * as __fd_glob_13 from "../content/docs/components/thinking-loader.mdx?collection=docs"
-import * as __fd_glob_12 from "../content/docs/components/streaming-ai-message.mdx?collection=docs"
-import * as __fd_glob_11 from "../content/docs/components/slash-command-input.mdx?collection=docs"
-import * as __fd_glob_10 from "../content/docs/components/prompt-suggestions.mdx?collection=docs"
-import * as __fd_glob_9 from "../content/docs/components/mutiple-models-input-box.mdx?collection=docs"
-import * as __fd_glob_8 from "../content/docs/components/input-box.mdx?collection=docs"
-import * as __fd_glob_7 from "../content/docs/components/inline-citation.mdx?collection=docs"
-import * as __fd_glob_6 from "../content/docs/components/chain-of-thought.mdx?collection=docs"
-import * as __fd_glob_5 from "../content/docs/components/artifact-viewer.mdx?collection=docs"
-import * as __fd_glob_4 from "../content/docs/components/ai-code-block.mdx?collection=docs"
+import * as __fd_glob_15 from "../content/docs/components/token-stats-badge.mdx?collection=docs"
+import * as __fd_glob_14 from "../content/docs/components/thinking-loader.mdx?collection=docs"
+import * as __fd_glob_13 from "../content/docs/components/streaming-ai-message.mdx?collection=docs"
+import * as __fd_glob_12 from "../content/docs/components/slash-command-input.mdx?collection=docs"
+import * as __fd_glob_11 from "../content/docs/components/prompt-suggestions.mdx?collection=docs"
+import * as __fd_glob_10 from "../content/docs/components/mutiple-models-input-box.mdx?collection=docs"
+import * as __fd_glob_9 from "../content/docs/components/input-box.mdx?collection=docs"
+import * as __fd_glob_8 from "../content/docs/components/inline-citation.mdx?collection=docs"
+import * as __fd_glob_7 from "../content/docs/components/chain-of-thought.mdx?collection=docs"
+import * as __fd_glob_6 from "../content/docs/components/artifact-viewer.mdx?collection=docs"
+import * as __fd_glob_5 from "../content/docs/components/ai-code-block.mdx?collection=docs"
+import * as __fd_glob_4 from "../content/docs/blocks/copilot-widget.mdx?collection=docs"
 import * as __fd_glob_3 from "../content/docs/blocks/chat-layout.mdx?collection=docs"
 import * as __fd_glob_2 from "../content/docs/index.mdx?collection=docs"
 import * as __fd_glob_1 from "../content/docs/components.mdx?collection=docs"
@@ -22,4 +23,4 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
   }
 }>({"doc":{"passthroughs":["extractedReferences"]}});
 
-export const docs = await create.docs("docs", "content/docs", {}, {"blocks.mdx": __fd_glob_0, "components.mdx": __fd_glob_1, "index.mdx": __fd_glob_2, "blocks/chat-layout.mdx": __fd_glob_3, "components/ai-code-block.mdx": __fd_glob_4, "components/artifact-viewer.mdx": __fd_glob_5, "components/chain-of-thought.mdx": __fd_glob_6, "components/inline-citation.mdx": __fd_glob_7, "components/input-box.mdx": __fd_glob_8, "components/mutiple-models-input-box.mdx": __fd_glob_9, "components/prompt-suggestions.mdx": __fd_glob_10, "components/slash-command-input.mdx": __fd_glob_11, "components/streaming-ai-message.mdx": __fd_glob_12, "components/thinking-loader.mdx": __fd_glob_13, "components/token-stats-badge.mdx": __fd_glob_14, });
+export const docs = await create.docs("docs", "content/docs", {}, {"blocks.mdx": __fd_glob_0, "components.mdx": __fd_glob_1, "index.mdx": __fd_glob_2, "blocks/chat-layout.mdx": __fd_glob_3, "blocks/copilot-widget.mdx": __fd_glob_4, "components/ai-code-block.mdx": __fd_glob_5, "components/artifact-viewer.mdx": __fd_glob_6, "components/chain-of-thought.mdx": __fd_glob_7, "components/inline-citation.mdx": __fd_glob_8, "components/input-box.mdx": __fd_glob_9, "components/mutiple-models-input-box.mdx": __fd_glob_10, "components/prompt-suggestions.mdx": __fd_glob_11, "components/slash-command-input.mdx": __fd_glob_12, "components/streaming-ai-message.mdx": __fd_glob_13, "components/thinking-loader.mdx": __fd_glob_14, "components/token-stats-badge.mdx": __fd_glob_15, });
