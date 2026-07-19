@@ -10,3 +10,4 @@ export * from "./inline-citation"
 export * from "./token-stats-badge"
 
 export * from "./slash-command-input"
+export * from "./ai-code-block"

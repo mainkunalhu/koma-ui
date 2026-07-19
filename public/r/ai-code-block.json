@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "ai-code-block",
+  "title": "AI Code Block",
+  "description": "A syntax-highlighted code block specifically styled for AI markdown responses with a sticky header and copy functionality.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "files": [
+    {
+      "path": "components/mdx/components/ai-code-block.tsx",
+      "content": "\"use client\"\n\nimport React, { useState } from \"react\"\nimport { Check, Copy } from \"lucide-react\"\n\nexport interface AiCodeBlockProps {\n  language: string\n  code: string\n  filename?: string\n  className?: string\n}\n\nexport default function AiCodeBlock({\n  language,\n  code,\n  filename,\n  className = \"\",\n}: AiCodeBlockProps) {\n  const [isCopied, setIsCopied] = useState(false)\n\n  const copyToClipboard = async () => {\n    if (!code) return\n    try {\n      await navigator.clipboard.writeText(code)\n      setIsCopied(true)\n      setTimeout(() => setIsCopied(false), 2000)\n    } catch (err) {\n      console.error(\"Failed to copy code: \", err)\n    }\n  }\n\n  return (\n    <div className={`my-4 overflow-hidden rounded-lg border border-border bg-[#0d1117] ${className}`}>\n      {/* Header */}\n      <div className=\"flex items-center justify-between bg-[#161b22] px-4 py-2 text-xs text-muted-foreground\">\n        <div className=\"flex items-center gap-2\">\n          {filename ? (\n            <span className=\"font-semibold text-foreground/80\">{filename}</span>\n          ) : (\n            <span className=\"uppercase\">{language}</span>\n          )}\n        </div>\n        <button\n          onClick={copyToClipboard}\n          className=\"flex items-center gap-1.5 rounded-md px-2 py-1 transition-colors hover:bg-muted/30 hover:text-foreground\"\n          aria-label=\"Copy code\"\n        >\n          {isCopied ? (\n            <>\n              <Check className=\"h-3.5 w-3.5 text-emerald-500\" />\n              <span>Copied</span>\n            </>\n          ) : (\n            <>\n              <Copy className=\"h-3.5 w-3.5\" />\n              <span>Copy</span>\n            </>\n          )}\n        </button>\n      </div>\n      \n      {/* Code Body */}\n      <div className=\"overflow-x-auto p-4\">\n        <pre className=\"text-sm text-foreground/90 font-mono\">\n          <code className={`language-${language}`}>{code}</code>\n        </pre>\n      </div>\n    </div>\n  )\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

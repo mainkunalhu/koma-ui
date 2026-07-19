@@ -41,6 +41,10 @@ const componentsList: GridItem[] = [
     name: "Slash Command Input",
     linkPath: "/docs/components/slash-command-input",
   },
+  {
+    name: "AI Code Block",
+    linkPath: "/docs/components/ai-code-block",
+  },
 ]
 
 export function ComponentsList() {

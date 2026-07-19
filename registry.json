@@ -195,6 +195,21 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "ai-code-block",
+      "type": "registry:ui",
+      "title": "AI Code Block",
+      "description": "A syntax-highlighted code block specifically styled for AI markdown responses with a sticky header and copy functionality.",
+      "dependencies": [
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "components/mdx/components/ai-code-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
